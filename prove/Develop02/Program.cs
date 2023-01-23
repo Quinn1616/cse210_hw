@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-       string userInput = null; 
+       
        Console.WriteLine("Welcome to the Journal Program!");
        Console.WriteLine("Please select one of the following choices:");
        Console.WriteLine("1. Write");
@@ -12,25 +12,34 @@ class Program
        Console.WriteLine("3. Load");
        Console.WriteLine("4. Save");
        Console.WriteLine("5. Quit");
-       Console.Write("What would you like to do? ");
-       userInput = Console.ReadLine();
+       //Console.Write("What would you like to do? ");
+       string userInput = "1"; 
+       //userInput = Console.ReadLine();
 
        if (userInput == "1")
         {
-        Console.WriteLine("Test 1");
+        Console.WriteLine(Journal.promptGenerator());
+        //string promptEntry = Console.ReadLine();
+        Journal.entry();
         }
 
        else if (userInput == "2")
-       {}
+       {
+        Journal.fileRead();
+       }
 
        else if (userInput == "3")
-       {}
+        {
+        Entries.FileOpen();
+        }
 
        else if (userInput == "4")
        {}
 
        else if (userInput == "5")
-       {}
+       {
+        Console.WriteLine("Goodbye.");
+       }
 
        else
        {
@@ -51,3 +60,4 @@ class Program
 // entries class
 // save and load functions
 // maybe json
+        
