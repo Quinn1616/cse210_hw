@@ -22,8 +22,6 @@ public class Journal
     }
     public static void fileRead()
     {
-        //string text = File.ReadAllText("EntriesJournal.txt");  
-        //Console.WriteLine(text);
         string[] lines = File.ReadAllLines("EntriesJournal.txt");
         foreach (string line in lines)  
         Console.WriteLine(line);   
