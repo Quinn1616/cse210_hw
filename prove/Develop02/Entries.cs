@@ -1,13 +1,10 @@
 using System;
-using System.IO;
-using System.Text;
-public class Entries
+public class Read
 {
-    public static void FileOpen()
+    public static void fileRead()
     {
-        string filePath = @"C:\Users\Quinn\Desktop\OneDrive - BYU-Idaho\Programming with Classes (CSE 210)\cse210_hw\prove\Develop02\EntriesJournal.txt";
-        using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read));
+        string[] lines = File.ReadAllLines("EntriesJournal.txt");
+        foreach (string line in lines)  
+        Console.WriteLine(line);   
     }
-    //Load EntriesJournal.txt
-    
 }

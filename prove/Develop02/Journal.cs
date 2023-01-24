@@ -1,10 +1,7 @@
 using System;
-
-
 public class Journal
 {
-    
-    public static string promptGenerator()
+    public static void promptGenerator()
     {
         var random = new Random();
         var _prompts = new List<string>();
@@ -16,17 +13,13 @@ public class Journal
         
         int index = random.Next(_prompts.Count);
         Console.WriteLine(_prompts[index]);
-        return (_prompts[index]);
-    }
-    public static void entry()
-    {
+        string promptEntry = Console.ReadLine();
+
         DateTime theCurrentTime = DateTime.Now;
         string dateText = theCurrentTime.ToShortDateString();
-        string promptEntry = dateText + " File write test\n";  
-        File.AppendAllText(@"C:\Users\Quinn\Desktop\OneDrive - BYU-Idaho\Programming with Classes (CSE 210)\cse210_hw\prove\Develop02\EntriesJournal.txt", promptEntry); 
-
+        promptEntry = dateText + " " + _prompts[index] + " " + promptEntry + "\n";  
+        File.AppendAllText(@"C:\Users\Quinn\OneDrive - BYU-Idaho\Programming with Classes (CSE 210)\cse210_hw\prove\Develop02\EntriesJournal.txt", promptEntry); 
     }
-
     public static void fileRead()
     {
         //string text = File.ReadAllText("EntriesJournal.txt");  
