@@ -19,11 +19,5 @@ public class Journal
         string dateText = theCurrentTime.ToShortDateString();
         promptEntry = dateText + " " + _prompts[index] + " " + promptEntry + "\n";  
         File.AppendAllText(@"C:\Users\Quinn\OneDrive - BYU-Idaho\Programming with Classes (CSE 210)\cse210_hw\prove\Develop02\EntriesJournal.txt", promptEntry); 
-    }
-    public static void fileRead()
-    {
-        string[] lines = File.ReadAllLines("EntriesJournal.txt");
-        foreach (string line in lines)  
-        Console.WriteLine(line);   
-    }
+    }    
 }
